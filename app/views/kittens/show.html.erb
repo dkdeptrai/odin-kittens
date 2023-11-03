@@ -1,0 +1,6 @@
+<h1>Nice to meet you, my name is <%= @kitten.name %></h1>
+
+<p>I am <%= @kitten.age %> years old!</p>
+<p>I am <%= @kitten.cuteness %> on a scale of 1 to 10 in cuteness.</p>
+<p>My softness level is <%= @kitten.softness %>.</p>
+<%= link_to 'Delete this Kitten', kitten_path(@kitten), method: :delete, data: { confirm: 'Are you sure?' } %>

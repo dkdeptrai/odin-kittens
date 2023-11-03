@@ -1,0 +1,15 @@
+<%= form_with model: @kitten, method: :post, local: true do |f| %>
+<%= f.label :name, "Kitten's name" %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :age, "Kitten's age" %>
+<%= f.number_field :age %> <br>
+
+<%= f.label :cuteness, "Kitten's cuteness" %>
+<%= f.select :cuteness, (1..10).to_a.map{ |n| [n,n] }%> <br>
+
+<%= f.label :softness, "Kitten's softness" %>
+<%= f.select :softness,['Enough', 'Great', 'Wonderful', 'Heavenly']%> <br>
+
+<%= f.submit @kitten.new_record? ? 'Create your Kitten' : 'Update Kitten' %>
+<% end %>
